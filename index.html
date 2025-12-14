@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV de Tony - Expert Systèmes Drone & VTOL - Responsable Pôle Innovation">
+    <meta name="keywords" content="drone, VTOL, ArduPilot, Pixhawk, conception mécanique, électronique embarquée, IA">
+    <title>Tony - Expert Systèmes Drone & VTOL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2c5282;
+            --accent-color: #3182ce;
+            --text-dark: #1a202c;
+            --text-light: #4a5568;
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--bg-white);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .title {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+
+        .contact-info .item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-info i {
+            color: var(--accent-color);
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title i {
+            color: var(--accent-color);
+        }
+
+        /* Profile Section */
+        .profile-text {
+            line-height: 1.8;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .profile-text strong {
+            color: var(--text-dark);
+        }
+
+        .profile-highlights {
+            background-color: var(--bg-light);
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+            margin-top: 15px;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 35px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .company-role {
+            flex: 1;
+        }
+
+        .company-name {
+            font-size: 1.3em;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .role {
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-top: 3px;
+        }
+
+        .period-location {
+            text-align: right;
+            color: var(--text-light);
+            font-size: 0.95em;
+        }
+
+        .period {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .subsection-title {
+            font-size: 1.1em;
+            color: var(--secondary-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .experience-item ul {
+            margin-left: 20px;
+            color: var(--text-light);
+        }
+
+        .experience-item li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .experience-item li strong {
+            color: var(--text-dark);
+        }
+
+        .partnerships {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .partnership-category {
+            background-color: var(--bg-light);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .partnership-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .partnership-category ul {
+            margin-left: 15px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-category {
+            background-color: var(--bg-light);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 8px 0;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .skill-category li strong {
+            color: var(--text-dark);
+        }
+
+        /* Formations Section */
+        .formations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .formation-category {
+            background-color: var(--bg-light);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .formation-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .formation-category ul {
+            list-style: none;
+        }
+
+        .formation-category li {
+            padding: 6px 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .formation-category li:before {
+            content: "\f19d";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--accent-color);
+            margin-top: 2px;
+        }
+
+        .formation-category li strong {
+            color: var(--text-dark);
+        }
+
+        /* Atouts Section */
+        .atouts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .atout-item {
+            background-color: var(--bg-light);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .atout-item i {
+            color: var(--accent-color);
+            font-size: 1.2em;
+            margin-top: 3px;
+        }
+
+        .atout-item strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .atout-item span {
+            color: var(--text-light);
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        /* Engagements Section */
+        .engagement-list {
+            list-style: none;
+        }
+
+        .engagement-list li {
+            padding: 12px;
+            margin-bottom: 10px;
+            background-color: var(--bg-light);
+            border-left: 4px solid var(--accent-color);
+            color: var(--text-light);
+        }
+
+        .engagement-list li strong {
+            color: var(--text-dark);
+        }
+
+        /* Mobilite Section */
+        .mobilite-info {
+            background-color: var(--bg-light);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .mobilite-info ul {
+            list-style: none;
+        }
+
+        .mobilite-info li {
+            padding: 10px 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .mobilite-info li i {
+            color: var(--accent-color);
+            width: 24px;
+        }
+
+        .mobilite-info li strong {
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+
+            .period-location {
+                text-align: left;
+                margin-top: 5px;
+            }
+
+            .skills-grid,
+            .formations-grid,
+            .atouts-grid,
+            .partnerships {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Tony Corroenne</h1>
+            <div class="title">Responsable Pôle Innovation | Expert Systèmes Drone & VTOL</div>
+            <div class="contact-info">
+                <div class="item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>La Rochelle (Mobile : Bordeaux, Toulouse)</span>
+                </div>
+                <div class="item">
+                    <i class="fas fa-envelope"></i>
+                    <span>tony.corroenne@gmail.com</span>
+                </div>
+                <div class="item">
+                    <i class="fas fa-phone"></i>
+                    <span>0663798297</span>
+                </div>
+                <div class="item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>43 ans</span>
+                </div>
+                <div class="item">
+                    <i class="fas fa-helicopter"></i>
+                    <span>Télépilote certifié (2026)</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <main class="content">
+            <!-- Profil Professionnel -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-user-tie"></i>
+                    Profil Professionnel
+                </h2>
+                <div class="profile-text">
+                    <p><strong>Expert en conception et développement de systèmes drone</strong> avec <strong>9 ans d'expérience en R&D aéronautique</strong> et <strong>15 ans de maîtrise en usinage de précision</strong>. Spécialisé dans les <strong>drones VTOL et multirotors</strong>, je conçois et développe des solutions complètes de la rédaction du cahier des charges jusqu'à la livraison client.</p>
+                    <br>
+                    <p><strong>Double compétence rare</strong> : conception mécanique & développement électronique/logiciel (IA, vision par ordinateur, systèmes embarqués). Capacité démontrée à piloter des projets innovants (10+ prototypes) et à collaborer avec des acteurs majeurs (Thales, Safran, MBDA, Marine Française, Enedis, Orano, INRIA).</p>
+                    <div class="profile-highlights">
+                        <strong>Atouts clés</strong> : Autonomie technique complète | Expertise ArduPilot/Pixhawk (modification firmware) | Vision produit industrialisable | Partenariats stratégiques défense & énergie | Anglais technique courant
+                    </div>
+                </div>
+            </section>
+
+            <!-- Expérience Professionnelle -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Expérience Professionnelle
+                </h2>
+
+                <!-- SKYDRONE -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="company-role">
+                            <div class="company-name">SKYDRONE</div>
+                            <div class="role">Responsable Pôle Innovation</div>
+                        </div>
+                        <div class="period-location">
+                            <div class="period">Juillet 2016 - Aujourd'hui (9 ans)</div>
+                            <div class="location">La Rochelle</div>
+                        </div>
+                    </div>
+
+                    <h4 class="subsection-title">Développement de Produits & Innovation</h4>
+                    <ul>
+                        <li><strong>Conception complète de systèmes drone</strong> : de la rédaction du cahier des charges à la livraison, en passant par la CAO, fabrication, assemblage et mise au point</li>
+                        <li><strong>Développement du drone AVIDRONE</strong> (inspection lignes électriques) : première entreprise française certifiée pour ce type de mission - Conception mécanique, électronique et intégration système</li>
+                        <li><strong>Co-développement VERSATYL</strong> (drone multi-configuration) : réalisation du cahier des charges, conception, modifications successives, réglages et mise au point des différentes configurations - <strong>15 unités produites et commercialisées</strong></li>
+                        <li><strong>Contribution majeure à l'écosystème VERSATYL complet</strong> : participation active au développement du drone, de la station sol de pilotage (GCS), de son logiciel de contrôle et de la liaison HF dédiée - Solution système complète et intégrée</li>
+                        <li><strong>Prototypage VTOL ORCA</strong> : fabrication des masters et moules composites, optimisation profils d'aile, schémas de câblage, assemblage complet et essais en vol - Projet interrompu après phase démonstration réussie</li>
+                        <li><strong>Développement de 10+ prototypes</strong> dans divers secteurs :
+                            <ul>
+                                <li>Drones de transport médical (colis de sang, consortium Bordeaux) avec premiers essais opérationnels</li>
+                                <li>Drones de transport logistique (démonstrations usine aéronautique)</li>
+                                <li>Systèmes pour cinéma et spectacle (conception spécifique)</li>
+                                <li>Cibles militaires MBDA (multirotors modifiés) - conception et réalisation première version</li>
+                            </ul>
+                        </li>
+                        <li><strong>Conception et développement de gimbals caméra</strong> : réalisation de plusieurs systèmes de stabilisation caméra sur mesure et réglage de gimbals évoluées pour applications cinéma et surveillance</li>
+                    </ul>
+
+                    <h4 class="subsection-title">Partenariats Stratégiques & Projets Clients</h4>
+                    <p style="color: var(--text-light); margin-bottom: 15px;">Interface privilégiée avec des acteurs majeurs de la défense, de l'énergie et de la recherche. Participation à la gestion de projets de <strong>10k€ à 100k€</strong> en binôme avec l'équipe commerciale.</p>
+
+                    <div class="partnerships">
+                        <div class="partnership-category">
+                            <h4>Défense & Sécurité</h4>
+                            <ul>
+                                <li><strong>THALES</strong> : conception et réalisation d'un prototype de drone lance-filets pour applications de neutralisation</li>
+                                <li><strong>MBDA</strong> : développement de cibles militaires (multirotors modifiés) sur cahier des charges défense</li>
+                                <li><strong>MARINE FRANÇAISE</strong> : formation de pilotes de drone et intégration de systèmes spécifiques pour applications navales</li>
+                            </ul>
+                        </div>
+                        <div class="partnership-category">
+                            <h4>Énergie & Infrastructure Critique</h4>
+                            <ul>
+                                <li><strong>ENEDIS & AMPACIMON</strong> : vente de matériel spécialisé et développement des premiers prototypes de drones au contact sur lignes électriques haute tension</li>
+                                <li><strong>ORANO</strong> : conception d'un prototype de drone d'inspection pour environnements nucléaires</li>
+                            </ul>
+                        </div>
+                        <div class="partnership-category">
+                            <h4>Aéronautique & Recherche</h4>
+                            <ul>
+                                <li><strong>SAFRAN & INRIA</strong> : intégration de dispositifs expérimentaux en "sac à dos" sur drones Skydrone pour projets de recherche avancée</li>
+                                <li><strong>DELAIR</strong> : tests et modifications VTOL sur prototype DT26 - Optimisation des performances en configuration hybride</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4 class="subsection-title">Expertise Technique & Support</h4>
+                    <ul>
+                        <li><strong>Expert systèmes de vol ArduPilot/Pixhawk</strong> (7 ans) : modification firmware, configuration MavLink, analyse de logs, réglages avancés</li>
+                        <li>Développement de <strong>solutions IA et vision par ordinateur</strong> sur Jetson Xavier NX (analyse d'image embarquée)</li>
+                        <li><strong>Programmation ESP32</strong> : plusieurs projets propriétaires en production</li>
+                        <li>Développement de <strong>logiciels d'acquisition et analyse de données</strong> pour expérimentations (VSCode, IA Claude Code, Gemini)</li>
+                        <li>Modification et personnalisation de logiciels de contrôle (QGroundControl, Mission Planner)</li>
+                    </ul>
+
+                    <h4 class="subsection-title">Formation & Support International</h4>
+                    <ul>
+                        <li><strong>Formation de ~30 clients</strong> (France, USA, Luxembourg, Espagne) sur l'utilisation et la maintenance des produits Skydrone</li>
+                        <li>Support technique et suivi client multi-pays</li>
+                    </ul>
+
+                    <h4 class="subsection-title">Management & Organisation</h4>
+                    <ul>
+                        <li>Pilotage de projets en équipe de 2-5 personnes selon les besoins</li>
+                        <li>Coordination avec les pôles production, commercial et technique</li>
+                    </ul>
+                </div>
+
+                <!-- GTS ANZIN -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="company-role">
+                            <div class="company-name">GTS ANZIN</div>
+                            <div class="role">Chargé de Devis & Préparation Chantier + Délégué à la Prévention</div>
+                        </div>
+                        <div class="period-location">
+                            <div class="period">2014 - 2016 (2 ans)</div>
+                            <div class="location">Anzin, Nord</div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Élaboration de devis techniques et chiffrages industriels</li>
+                        <li>Préparation et planification de chantiers d'usinage</li>
+                        <li><strong>Délégué à la prévention</strong> : formation HSE Vinçotte, gestion de la sécurité sur site</li>
+                    </ul>
+                </div>
+
+                <!-- ECL RONCHIN -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="company-role">
+                            <div class="company-name">ECL RONCHIN</div>
+                            <div class="role">Opérateur CN</div>
+                        </div>
+                        <div class="period-location">
+                            <div class="period">2013 - 2014 (1 an)</div>
+                            <div class="location">Ronchin, Nord</div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Usinage de précision sur machines-outils CNC pour la fabrication d'équipements aluminium</li>
+                    </ul>
+                </div>
+
+                <!-- FORMATION CONTINUE -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="company-role">
+                            <div class="company-name">FORMATION CONTINUE</div>
+                            <div class="role">BTS Industrialisation des Produits Mécaniques</div>
+                        </div>
+                        <div class="period-location">
+                            <div class="period">2012 - 2013 (1 an)</div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Formation en alternance pour compléter les compétences en industrialisation</li>
+                    </ul>
+                </div>
+
+                <!-- ASCO INDUSTRIES -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="company-role">
+                            <div class="company-name">ASCO INDUSTRIES</div>
+                            <div class="role">Opérateur Régleur Machine-Outil CN</div>
+                        </div>
+                        <div class="period-location">
+                            <div class="period">2008 - 2012 (4 ans)</div>
+                            <div class="location">Zaventem, Belgique</div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Usinage aéronautique de haute précision sur CNC 5 axes</li>
+                        <li>Réglage et programmation de machines-outils complexes</li>
+                        <li>Production de pièces pour l'industrie aéronautique</li>
+                    </ul>
+                </div>
+
+                <!-- PARCOURS ANTÉRIEUR -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="company-role">
+                            <div class="company-name">PARCOURS ANTÉRIEUR EN USINAGE DE PRÉCISION</div>
+                            <div class="role">Opérateur CN / Décolleteur</div>
+                        </div>
+                        <div class="period-location">
+                            <div class="period">2002 - 2008 (6 ans)</div>
+                            <div class="location">Nord & Haute-Savoie</div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>Mouvet Maubeuge</strong> (2007-2008) | Opérateur CN</li>
+                        <li><strong>Société d'usinage Douai</strong> (2005-2007) | Opérateur CN</li>
+                        <li><strong>Flomeca</strong> (2004-2005) | Opérateur CN</li>
+                        <li><strong>Atelier d'usinage Hordain</strong> (2003-2004) | Opérateur CN</li>
+                        <li><strong>Décolletage Haute-Savoie</strong> (2002-2003) | Décolleteur</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Compétences Techniques -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs"></i>
+                    Compétences Techniques
+                </h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Conception & CAO/FAO</h3>
+                        <ul>
+                            <li><strong>CAO 3D</strong> : SolidWorks, Fusion 360, 3D Experience (25 ans d'expérience depuis études)</li>
+                            <li><strong>CFAO</strong> : TopSolid, CamBam - Programmation CN et génération trajectoires</li>
+                            <li><strong>Conception électronique</strong> : KiCad, Altium Designer (conception de PCB sur mesure)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Systèmes Drone & Avionique</h3>
+                        <ul>
+                            <li><strong>Expertise ArduPilot/Pixhawk</strong> : modification firmware, configuration MavLink, paramétrage avancé, analyse logs</li>
+                            <li><strong>Systèmes VTOL</strong> : conception, réglage, essais en vol (pilote qualifié)</li>
+                            <li><strong>Gimbals & Stabilisation caméra</strong> : conception, développement et réglage de systèmes de stabilisation</li>
+                            <li><strong>Télémétrie & Radio HF</strong> : RFDesign, Doodle Labs, systèmes longue portée</li>
+                            <li><strong>Logiciels de contrôle</strong> : QGroundControl, Mission Planner (utilisation et modification)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Développement & Programmation</h3>
+                        <ul>
+                            <li><strong>Systèmes embarqués</strong> : Programmation ESP32 (projets multiples en production)</li>
+                            <li><strong>IA & Vision par ordinateur</strong> : Jetson Xavier NX, analyse d'image temps réel</li>
+                            <li><strong>Développement logiciel</strong> : VSCode, Python, outils d'acquisition et d'analyse de données</li>
+                            <li><strong>IA générative</strong> : Utilisation avancée de Claude Code, Gemini pour le développement</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Matériaux Composites & Fabrication</h3>
+                        <ul>
+                            <li><strong>Maîtrise des composites</strong> : carbone, fibre de verre, Kevlar</li>
+                            <li><strong>Fabrication de moules</strong> : conception et réalisation de moules pour stratification</li>
+                            <li><strong>Stratification & laminage</strong> : élaboration de process de fabrication composite</li>
+                            <li><strong>Usinage multi-matériaux</strong> : métaux, plastiques, composites</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Usinage & Production</h3>
+                        <ul>
+                            <li><strong>Machines-outils CN</strong> : Fraiseuses 3-5 axes, tours CN, rectifieuses</li>
+                            <li><strong>Programmation CN</strong> : ISO, conversationnel, FAO</li>
+                            <li><strong>Métrologie</strong> : Contrôle dimensionnel et géométrique de précision</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formations & Certifications -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Formations & Certifications
+                </h2>
+                <div class="formations-grid">
+                    <div class="formation-category">
+                        <h3>Formations diplômantes</h3>
+                        <ul>
+                            <li><strong>BTS Industrialisation des Produits Mécaniques</strong> (2013)</li>
+                            <li><strong>BTS Micromécanique</strong> (2002)</li>
+                            <li><strong>BAC Microtechniques</strong> (2000)</li>
+                        </ul>
+                    </div>
+
+                    <div class="formation-category">
+                        <h3>Certifications professionnelles</h3>
+                        <ul>
+                            <li><strong>Certificat de Télépilote de Drone</strong> - Valide</li>
+                            <li><strong>Formation HSE</strong> - Vinçotte (2014-2016)</li>
+                        </ul>
+                    </div>
+
+                    <div class="formation-category">
+                        <h3>Formation continue</h3>
+                        <ul>
+                            <li><strong>IA et Vision par Ordinateur</strong> - Autoformation continue (2020-2025)</li>
+                            <li><strong>Développement sur systèmes embarqués</strong> - Autoformation (ESP32, Jetson)</li>
+                            <li><strong>Électronique et Programmation</strong> - Formation au contact de collègues experts</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Engagements & Réalisations -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-star"></i>
+                    Engagements & Réalisations
+                </h2>
+                <ul class="engagement-list">
+                    <li><strong>Président Club d'Aéromodélisme de Valenciennes</strong> (3 ans) - Gestion associative et promotion de l'aéromodélisme</li>
+                    <li><strong>Pratique de l'aéromodélisme</strong> depuis 1997 (16 ans) - Expertise pilotage et conception</li>
+                    <li><strong>Simulation aéronautique</strong> : Flight Simulator 2024, DCS - Conception et fabrication d'éléments de cockpit personnalisés</li>
+                </ul>
+            </section>
+
+            <!-- Atouts Professionnels -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-trophy"></i>
+                    Atouts Professionnels
+                </h2>
+                <div class="atouts-grid">
+                    <div class="atout-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Autonomie complète</strong>
+                            <span>De la conception au vol, maîtrise de toute la chaîne de développement</span>
+                        </div>
+                    </div>
+                    <div class="atout-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Polyvalence technique</strong>
+                            <span>Mécanique, électronique, logiciel, matériaux composites</span>
+                        </div>
+                    </div>
+                    <div class="atout-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Écosystème stratégique</strong>
+                            <span>Collaborations réussies avec Thales, Safran, MBDA, Marine Française, Enedis, Orano, INRIA</span>
+                        </div>
+                    </div>
+                    <div class="atout-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Vision produit</strong>
+                            <span>Capacité à industrialiser des prototypes et à gérer la relation client</span>
+                        </div>
+                    </div>
+                    <div class="atout-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Veille technologique</strong>
+                            <span>Intégration continue des nouvelles technologies (IA, vision embarquée)</span>
+                        </div>
+                    </div>
+                    <div class="atout-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Compétences avancées</strong>
+                            <span>Modification firmware ArduPilot, développement VTOL, composites avancés</span>
+                        </div>
+                    </div>
+                    <div class="atout-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>International</strong>
+                            <span>Anglais technique courant (oral/écrit), expérience clients internationaux</span>
+                        </div>
+                    </div>
+                    <div class="atout-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Management de projet</strong>
+                            <span>Budget 10-100k€, équipes 2-5 personnes</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mobilité & Disponibilité -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-location-arrow"></i>
+                    Mobilité & Disponibilité
+                </h2>
+                <div class="mobilite-info">
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marked-alt"></i>
+                            <div><strong>Mobilité géographique</strong> : Oui (zones ciblées : Bordeaux, Toulouse)</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-plane"></i>
+                            <div><strong>Déplacements</strong> : Acceptés selon besoins du poste</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-language"></i>
+                            <div><strong>Langues</strong> : Français (natif) | Anglais technique (courant oral/écrit, usage quotidien)</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>CV mis à jour : Décembre 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
